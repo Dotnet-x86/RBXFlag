@@ -28,14 +28,6 @@ local myFlag = Flag.new({
     IsRunning = false
 })
 ```
-Check If a Flag is Active
-You can check if a specific flag is active by using the HasFlag function:
-
-```lua
-if myFlag:HasFlag("IsJumping") then
-    print("The player is jumping!")
-end
-```
 Check Multiple Flags
 You can check if multiple flags are active at once:
 
@@ -79,20 +71,42 @@ You can also load the flag state from an integer:
 ```lua
 myFlag(7) -- Loads the flag state based on the integer value.
 ```
-API Documentation
-HasFlag(name: string): Checks if the flag with the given name is active.
-HasFlags(...: string): Checks if all the flags with the given names are active.
-IsEmpty(): Checks if no flags are active.
-Toggle(name: string): Toggles the value of the specified flag.
-Clear(): Resets all flags to false.
-SetFlags(flags: table): Sets multiple flags at once.
-GetActiveFlags(): Returns a list of all active flags.
-__call(int: number): Sets the flag state based on the provided integer value.
+## API Documentation
+
+- **HasFlag(name: string):**  
+  Checks if the flag with the given name is active.  
+  Returns `true` if the flag is active, otherwise `false`.
+
+- **HasFlags(...: string):**  
+  Checks if all the flags with the given names are active.  
+  Returns `true` only if all specified flags are active, otherwise `false`.
+
+- **IsEmpty():**  
+  Checks if no flags are active.  
+  Returns `true` if no flags are active, otherwise `false`.
+
+- **Toggle(name: string):**  
+  Toggles the value of the specified flag.  
+  If the flag is active, it becomes inactive; if it's inactive, it becomes active.
+
+- **Clear():**  
+  Resets all flags to `false`.  
+  This will clear all the flags and set them to inactive.
+
+- **SetFlags(flags: table):**  
+  Sets multiple flags at once.  
+  Takes a table where each key is the flag name and the value is a boolean (`true` or `false`) indicating the desired state.
+
+- **GetActiveFlags():**  
+  Returns a list of all active flags.  
+  This will return a table of flag names that are currently active.
+
+- **__call(int: number):**  
+  Sets the flag state based on the provided integer value.  
+  If the integer corresponds to a valid state, it updates the flags accordingly. If not, a warning is shown.
+
 Contributions
 Feel free to fork the repository and submit pull requests if you'd like to contribute. For any bugs or feature requests, open an issue on GitHub.
 
 License
 This library is open-source and licensed under the MIT License.
-
-Contact
-If you have any questions or need further assistance, feel free to reach out to me through the GitHub Issues page.
