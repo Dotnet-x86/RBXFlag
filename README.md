@@ -102,8 +102,5 @@ myFlag(7) -- Loads the flag state based on the integer value.
   Sets the flag state based on the provided integer value.  
   If the integer corresponds to a valid state, it updates the flags accordingly. If not, a warning is shown.
 
-Contributions
-Feel free to fork the repository and submit pull requests if you'd like to contribute. For any bugs or feature requests, open an issue on GitHub.
-
-License
+##License
 This library is open-source and licensed under the MIT License.
