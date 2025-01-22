@@ -25,6 +25,7 @@ function Flag <F> (definations: F)
 		for _, name in ipairs({...}) do
 			if not self[name] then
 				has_all = false
+				break
 			end
 		end
 		
