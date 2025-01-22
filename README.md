@@ -32,6 +32,16 @@ You can check if multiple flags are active at once:
 ```lua
 if myFlag:HasFlags("IsJumping", "IsRunning") then
     print("The player is both jumping and running!")
+else
+    print("The player is not jumping and running at the same time!")
+end
+```
+
+Check a Single Flag with Is
+You can check if a single flag is active using the Is function:
+```lua
+if myFlag:Is("IsRunning") then
+    print("The player is running!")
 end
 ```
 Toggle Flags
@@ -77,13 +87,13 @@ myFlag(7) or myFlag(#anotherFlag) -- Loads the flag state based on the integer v
 ```
 ## API Documentation
 
-- **HasFlag(name: string):**  
-  Checks if the flag with the given name is active.  
-  Returns `true` if the flag is active, otherwise `false`.
-
 - **HasFlags(...: string):**  
   Checks if all the flags with the given names are active.  
   Returns `true` only if all specified flags are active, otherwise `false`.
+
+- **Is(name: string):**
+  Checks if the specified flag is active.
+  Returns true if the flag is active, otherwise false.
 
 - **IsEmpty():**  
   Checks if no flags are active.  
@@ -108,6 +118,10 @@ myFlag(7) or myFlag(#anotherFlag) -- Loads the flag state based on the integer v
 - **__call(int: number):**  
   Sets the flag state based on the provided integer value.  
   If the integer corresponds to a valid state, it updates the flags accordingly. If not, a warning is shown.
+  
+- **__len():**
+  Returns the bitmask integer representing the current state of all flags.
+  This is useful for retrieving and storing the flag states in a compact form.
 
 ## License
 This library is open-source and licensed under the MIT License.
