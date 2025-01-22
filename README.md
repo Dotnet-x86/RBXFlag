@@ -22,15 +22,15 @@ You can create a `Flag` instance by passing a table of flag definitions.
 
 ```lua
 local myFlag = Flag.new({
-    IsJumping = false,
-    IsRunning = false
+    Jumping = false,
+    Running = false
 })
 ```
 Check Multiple Flags
 You can check if multiple flags are active at once:
 
 ```lua
-if myFlag:HasFlags("IsJumping", "IsRunning") then
+if myFlag:HasFlags("Jumping", "Running") then
     print("The player is both jumping and running!")
 else
     print("The player is not jumping and running at the same time!")
@@ -40,7 +40,7 @@ end
 Check a Single Flag with Is
 You can check if a single flag is active using the Is function:
 ```lua
-if myFlag:Is("IsRunning") then
+if myFlag:Is("Running") then
     print("The player is running!")
 end
 ```
@@ -48,7 +48,7 @@ Toggle Flags
 You can toggle the value of a flag:
 
 ```lua
-myFlag:Toggle("IsRunning")
+myFlag:Toggle("Running")
 ```
 Clear All Flags
 You can reset all flags to false using the Clear function:
@@ -61,8 +61,8 @@ You can set multiple flags at once:
 
 ```lua
 myFlag:SetFlags({
-    IsJumping = true,
-    IsRunning = true
+    Jumping = true,
+    Running = true
 })
 ```
 Get Active Flags
