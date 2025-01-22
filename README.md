@@ -31,8 +31,6 @@ Check If a Flag is Active
 You can check if a specific flag is active by using the HasFlag function:
 
 lua
-คัดลอก
-แก้ไข
 if myFlag:HasFlag("IsJumping") then
     print("The player is jumping!")
 end
@@ -40,8 +38,6 @@ Check Multiple Flags
 You can check if multiple flags are active at once:
 
 lua
-คัดลอก
-แก้ไข
 if myFlag:HasFlags("IsJumping", "IsRunning") then
     print("The player is both jumping and running!")
 end
@@ -49,22 +45,16 @@ Toggle Flags
 You can toggle the value of a flag:
 
 lua
-คัดลอก
-แก้ไข
 myFlag:Toggle("IsRunning")
 Clear All Flags
 You can reset all flags to false using the Clear function:
 
 lua
-คัดลอก
-แก้ไข
 myFlag:Clear()
 Set Multiple Flags
 You can set multiple flags at once:
 
 lua
-คัดลอก
-แก้ไข
 myFlag:SetFlags({
     IsJumping = true,
     IsRunning = true
@@ -73,8 +63,6 @@ Get Active Flags
 To retrieve a list of all active flags:
 
 lua
-คัดลอก
-แก้ไข
 local activeFlags = myFlag:GetActiveFlags()
 for _, flag in ipairs(activeFlags) do
     print(flag)
@@ -83,8 +71,6 @@ Example of Flag Usage with Integer
 You can also load the flag state from an integer:
 
 lua
-คัดลอก
-แก้ไข
 myFlag(7) -- Loads the flag state based on the integer value.
 API Documentation
 HasFlag(name: string): Checks if the flag with the given name is active.
