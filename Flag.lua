@@ -23,10 +23,8 @@ function Flag <F> (definations: F)
 		local has_all = true
 		
 		for _, name in ipairs({...}) do
-			local bit = Definations[name]
-			if bit and bit32.band(FLAG_INT, bit) == 0 then
+			if not self[name] then
 				has_all = false
-				break
 			end
 		end
 		
