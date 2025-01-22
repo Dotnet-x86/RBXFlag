@@ -1,6 +1,4 @@
 markdown
-คัดลอก
-แก้ไข
 # Flag Library for Roblox
 
 ## Overview
