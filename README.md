@@ -2,15 +2,16 @@
 
 ## Overview
 
-`Flag` is a flexible library for handling flag-based systems in Roblox. It allows you to define, manage, and manipulate flags using integers, which are highly efficient for storage and performance. The library provides an easy way to store multiple flags within a single integer and offers functions to toggle, check, and manage flag states.
+`Flag` is a flexible library for handling flag-based systems in Roblox. It allows you to define, manage, and manipulate flags using integers, which are highly efficient for storage and performance. The library uses `bit32` to store multiple flags within a single integer, allowing compact and efficient flag management. You can toggle, check, and manage the states of flags using bitwise operations, making it ideal for performance-critical systems.
 
-This library is useful for handling a variety of use cases, such as managing multiple boolean attributes or states in a compact manner, ideal for performance-critical systems.
+This library is useful for handling a variety of use cases, such as managing multiple boolean attributes or states in a compact manner, and it's especially efficient for systems where managing a large number of boolean states is necessary.
 
 ## Features
 
-- **Compact Storage**: Flags are stored in an integer, which allows for efficient storage and performance.
+- **Compact Storage**: Flags are stored in a single integer using `bit32` bitwise operations, which allows for efficient storage and performance.
 - **Easy Flag Management**: Supports toggling, checking, and clearing flags.
 - **Custom Flag Definitions**: Allows you to define your own flags and their corresponding boolean values.
+- **Efficient Flag Operations**: Uses `bit32` for bitwise operations to manage multiple flags with a single integer.
 - **Compatibility**: Works well with Roblox games and can be used in a variety of scenarios where boolean states are required.
 
 ## Usage
