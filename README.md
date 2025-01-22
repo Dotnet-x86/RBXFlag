@@ -64,10 +64,16 @@ for _, flag in ipairs(activeFlags) do
     print(flag)
 end
 ```
+To get the Bitmask Integer that represents the current flag state, you can use the __len method:
+```lua
+local bitmask = #myFlag  -- Get the bitmask integer representing the current state of flags
+print(bitmask)  -- Outputs the bitmask integer
+```
 Example of Flag Usage with Integer
 You can also load the flag state from an integer:
 ```lua
-myFlag(7) -- Loads the flag state based on the integer value.
+myFlag(7) or myFlag(#anotherFlag) -- Loads the flag state based on the integer value.
+
 ```
 ## API Documentation
 
