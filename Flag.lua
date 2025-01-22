@@ -126,7 +126,7 @@ function Flag <F> (definations: F)
 		end,
 
 		__newindex = function(self, key: string, value: boolean)
-			if PropertyList[key] then
+			if PropertyList[key] and Definations[key] then
 				if typeof(value) == 'boolean' then
 					local bit = Definations[key]
 					if value == true then
