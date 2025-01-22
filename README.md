@@ -27,51 +27,58 @@ local myFlag = Flag.new({
     IsJumping = false,
     IsRunning = false
 })
+```
 Check If a Flag is Active
 You can check if a specific flag is active by using the HasFlag function:
 
-lua
+```lua
 if myFlag:HasFlag("IsJumping") then
     print("The player is jumping!")
 end
+```
 Check Multiple Flags
 You can check if multiple flags are active at once:
 
-lua
+```lua
 if myFlag:HasFlags("IsJumping", "IsRunning") then
     print("The player is both jumping and running!")
 end
+```
 Toggle Flags
 You can toggle the value of a flag:
 
-lua
+```lua
 myFlag:Toggle("IsRunning")
+```
 Clear All Flags
 You can reset all flags to false using the Clear function:
 
-lua
+```lua
 myFlag:Clear()
+```
 Set Multiple Flags
 You can set multiple flags at once:
 
-lua
+```lua
 myFlag:SetFlags({
     IsJumping = true,
     IsRunning = true
 })
+```
 Get Active Flags
 To retrieve a list of all active flags:
 
-lua
+```lua
 local activeFlags = myFlag:GetActiveFlags()
 for _, flag in ipairs(activeFlags) do
     print(flag)
 end
+```
 Example of Flag Usage with Integer
 You can also load the flag state from an integer:
-
-lua
+```lua
 myFlag(7) -- Loads the flag state based on the integer value.
+```
 API Documentation
 HasFlag(name: string): Checks if the flag with the given name is active.
 HasFlags(...: string): Checks if all the flags with the given names are active.
