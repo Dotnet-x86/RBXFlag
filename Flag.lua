@@ -119,7 +119,7 @@ function Flag <F> (definations: F)
 			if PropertyList[key] then
 				local bit = Definations[key]
 
-				return bit and bit32.band(FLAG_INT, bit) ~= 0 or flag[key]
+				return bit and bit32.band(FLAG_INT, bit) ~= 0 or flag[key] or false
 			end
 			
 			error(('%s is not a valid member of %s'):format(key, tostring(self)))
